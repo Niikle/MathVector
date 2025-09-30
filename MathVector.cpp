@@ -6,7 +6,7 @@ MathVector::MathVector() {
 	this->startPoint.z =
 	this->endPoint.x =
 	this->endPoint.y = 
-	this->endPoint.z = this->i = this->j =0;
+	this->endPoint.z = i = j = 0;
 }
 
 MathVector::MathVector(Point startPoint, Point endPoint) {
@@ -33,4 +33,21 @@ MathVector::MathVector(MathVector& other) {
 void MathVector::calculateIJ() {
 	i = endPoint.x - startPoint.x;
 	j = endPoint.y - endPoint.y;
+}
+
+bool MathVector::operator == (const MathVector& other) {
+	return this->startPoint == other.startPoint &&
+		   this->endPoint == other.endPoint;
+}
+
+bool MathVector::operator != (const MathVector& other) {
+	return this->startPoint != other.startPoint ||
+		   this->endPoint != other.endPoint;
+}
+
+MathVector& MathVector::operator * (double num) {
+	this->endPoint.x *= num;
+	this->endPoint.y *= num;
+	this->endPoint.z *= num;
+	calculateIJ();
 }

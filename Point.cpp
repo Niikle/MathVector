@@ -15,3 +15,15 @@ Point::Point(Point& other) {
 	this->y = other.y;
 	this->z = other.z;
 }
+
+bool Point::operator == (const Point& other) {
+	return this->x == other.x &&
+		   this->y == other.y &&
+		   this->z == other.z;
+}
+
+bool Point::operator != (const Point& other) {
+	return this->x != other.x ||
+		   this->y != other.y ||
+		   this->z != other.z;
+}
