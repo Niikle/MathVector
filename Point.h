@@ -1,5 +1,4 @@
 #pragma once
-//#include "MathVector.h"
 
 class Point{
 private:
@@ -8,6 +7,7 @@ private:
 public:
 	Point();
 	Point(double x, double y, double z);
+	Point(Point& other);
 	friend class MathVector;
 
 };

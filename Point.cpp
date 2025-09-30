@@ -9,3 +9,9 @@ Point::Point(double x, double y, double z) {
 	this->y = y;
 	this->z = z;
 }
+
+Point::Point(Point& other) {
+	this->x = other.x;
+	this->y = other.y;
+	this->z = other.z;
+}
