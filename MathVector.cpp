@@ -6,7 +6,7 @@ MathVector::MathVector() {
 	this->startPoint.z =
 	this->endPoint.x =
 	this->endPoint.y = 
-	this->endPoint.z = 0;
+	this->endPoint.z = this->i = this->j =0;
 }
 
 MathVector::MathVector(Point startPoint, Point endPoint) {
@@ -16,6 +16,7 @@ MathVector::MathVector(Point startPoint, Point endPoint) {
 	this->endPoint.x = endPoint.x;
 	this->endPoint.y = endPoint.y;
 	this->endPoint.z = endPoint.z;
+	calculateIJ();
 }
 
 MathVector::MathVector(MathVector& other) {
@@ -27,4 +28,9 @@ MathVector::MathVector(MathVector& other) {
 	this->endPoint.z = other.endPoint.z;
 	this->i = other.i;
 	this->j = other.j;
+}
+
+void MathVector::calculateIJ() {
+	i = endPoint.x - startPoint.x;
+	j = endPoint.y - endPoint.y;
 }
