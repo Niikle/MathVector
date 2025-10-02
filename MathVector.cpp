@@ -1,4 +1,5 @@
 #include "MathVector.h"
+#include <cmath>
 
 MathVector::MathVector() {
 	i = j = k = 0;
@@ -42,4 +43,8 @@ MathVector& MathVector::operator + (const MathVector& other) {
 	this->k += other.k;
 
 	return *this;
+}
+
+double MathVector::length() {
+	return abs(sqrt(i * i) + sqrt(j * j) + sqrt(k * k));
 }

@@ -15,4 +15,6 @@ public:
 	MathVector& operator * (double num);
 	MathVector& operator + (const MathVector& other);
 
+	double length();
+
 };
