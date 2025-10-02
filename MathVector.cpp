@@ -76,3 +76,11 @@ MathVector& MathVector::reverse() {
 
 	return *this;
 }
+
+void foo(){}
+
+//double scalarProduct(MathVector& thirstVector, MathVector& seconsVector) {
+//	return thirstVector.getI() * seconsVector.getI() +
+//		   thirstVector.getJ() * seconsVector.getJ() +
+//		   thirstVector.getK() * seconsVector.getK();
+//}

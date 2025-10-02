@@ -27,4 +27,7 @@ namespace Vectors {
 		MathVector& reverse();
 
 	};
+
+	void foo();
+	//double scalarProduct(MathVector& thirstVector, MathVector& seconsVector);
 }
